@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>James Bond movie villains</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <br />
+    <app-villain-list [villains]="villains$"> </app-villain-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="cacheReload()">Reload from cache</button>
+    <button mat-raised-button (click)="quickReload()">Reload 0 ms</button>
+    <button mat-raised-button (click)="slowReload(100)">Reload 100 ms</button>
+    <button mat-raised-button (click)="slowReload(1000)">Reload 1000 ms</button>
+    <button mat-raised-button (click)="backgroundRequest()">
+      Background request
+    </button>
+  </mat-card-actions>
+</mat-card>
